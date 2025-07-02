@@ -71,11 +71,11 @@ $booleanCheckResult = $checkmate->checkVerificationToken('email@address.com', '1
 ```php
 
 use F4\Checkmate;
-use F4\Checkmate\Adapter\Twilio;
+use F4\Checkmate\Adapter\TwilioAdapter;
 use Throwable;
 
 $checkmate = new Checkmate()
-  ->withAdapter(new Twilio()
+  ->withAdapter(new TwilioAdapter()
     ->withOption('accountSid', '...')
     ->withOption('authToken', '...')
     ->withOption('verifySid', '...')
