@@ -30,7 +30,6 @@
         "phpstan": "phpstan --level=1 analyse src tests"
     },
     "require": {
-        "twilio/sdk": "^8.6",
         "guzzlehttp/guzzle": "^7.0"
     },
     "require-dev": {
