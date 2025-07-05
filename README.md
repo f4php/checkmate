@@ -1,6 +1,8 @@
-# Checkmate
+# Overview
 
-Checkmate is a user verification SDK for F4 that uses [Twilio Verify API](https://www.twilio.com/docs/verify/api) by default.
+Checkmate is a user verification package for [F4](https://github.com/f4php/f4), a lighweight web development framework.
+
+Checkmate uses [Twilio Verify API](https://www.twilio.com/docs/verify/api) by default.
 
 Checkmate implements a very simple `F4\Checkmate\UserVerificationServiceInterface`, so you can create your own drop-in replacement if needed.
 
