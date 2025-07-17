@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace F4\Checkmate;
+namespace F4\Checkmate\Adapter;
 
 use Composer\Pcre\Preg;
 use F4\Checkmate\Adapter\AdapterInterface;
