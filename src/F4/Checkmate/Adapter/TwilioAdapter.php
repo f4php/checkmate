@@ -61,7 +61,7 @@ class TwilioAdapter implements AdapterInterface
     }
     public function sendVerificationToken(string $to, string $channel, array $options = []): mixed
     {
-        $channel = $channel ?? $this->getOption('defaultChannel');
+        $channel = $channel ?: $this->getOption('defaultChannel');
         if (!in_array($channel, $this->getSupportedChannels())) {
             throw new InvalidArgumentException("Unsupported channel: {$channel}");
         }
@@ -112,10 +112,11 @@ class TwilioAdapter implements AdapterInterface
             if (false !== strpos($response->getHeaderLine('Content-Type'), 'application/json')) {
                 $responseBody = json_decode($responseBody, true, JSON_THROW_ON_ERROR);
             }
+            return $responseBody;
         } catch (Throwable $e) {
             $this->processException($e);
         }
-        return $responseBody;
+        return null;
     }
     protected static function isValidEmail(string $address): bool
     {
