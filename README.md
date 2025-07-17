@@ -27,8 +27,8 @@ namespace F4;
 class Config extends AbstractConfig
 {
     // ...
-    public string CHECKMATE_ADAPTER_CLASS = \F4\Checkmate\Adapter\TwilioAdapter::class; // the default adapter
-    public string CHECKMATE_DEFAULT_CHANNEL = 'email'; // must be one of Adapter's supported channels, see below for channels supported by Twilio
+    public string const CHECKMATE_ADAPTER_CLASS = \F4\Checkmate\Adapter\TwilioAdapter::class; // the default adapter
+    public string const CHECKMATE_DEFAULT_CHANNEL = 'email'; // must be one of Adapter's supported channels, see below for channels supported by Twilio
     // ...
 }
 ```
@@ -45,11 +45,11 @@ class Config extends AbstractConfig
 {
     // ...
     #[SensitiveParameter]
-    public string TWILIO_ACCOUNT_SID = '...';
+    public string const TWILIO_ACCOUNT_SID = '...';
     #[SensitiveParameter]
-    public string TWILIO_AUTH_TOKEN = '...';
+    public string const TWILIO_AUTH_TOKEN = '...';
     #[SensitiveParameter]
-    public string TWILIO_VERIFY_SID = '...';
+    public string const TWILIO_VERIFY_SID = '...';
     // ...
 }
 ```
